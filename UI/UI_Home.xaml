@@ -1,0 +1,55 @@
+﻿<Window x:Class="UI.UI_Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="UI_Home"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"
+        Height="850" 
+        Width="1280">
+    <Grid>
+    <Border CornerRadius="10 10 0 0">
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Color="#223266" Offset="0"/>
+                <GradientStop Color="#27396b" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="COTSE" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50"  Foreground="White"/>
+            <DockPanel Grid.Row="1">
+                <TextBox Name="txtFilePath" Height="50" Width="900" HorizontalAlignment="Left" Margin="20"/>
+                <Button Height="50" Width="200" Content="Open" FontSize="20" FontWeight="SemiBold" Click="Open_Click"/>
+            </DockPanel>
+            <DockPanel Grid.Row="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="253*"/>
+                        <ColumnDefinition Width="67*"/>
+                        <ColumnDefinition Width="320*"/>
+                    </Grid.ColumnDefinitions>
+                        <Border CornerRadius="10" Margin="10,10,10,10" Background="White" Grid.ColumnSpan="2">
+                        </Border>
+                        <Border Grid.Column="2" CornerRadius="10" Margin="10,10,10,10" Background="White">
+                        </Border>
+                </Grid>
+            </DockPanel>
+            <DockPanel Grid.Row="3">
+                <Button Content="Download Given Template" Height="50" Width="250" HorizontalAlignment="Left" Margin="30"/>
+                <Button Content="Exit" Height="50" Width="150" HorizontalAlignment="Right" Margin="30"/>
+            </DockPanel>
+        </Grid>
+    </Border>
+    </Grid>
+</Window>
